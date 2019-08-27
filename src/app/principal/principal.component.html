@@ -1,0 +1,41 @@
+<br>
+
+<p align="center">Bienvenido {{nombre}}</p>
+<p align="center">Trabajo de: Arturo Misael Escalante Licona</p>
+<div class="col-md-4 offset-md-4">
+  <div class="card">
+    <div class="card-body">
+      <form>
+        <div class="form-group" >
+            <input type="number" name="numero"class="form-control"  [(ngModel)]="numero">
+          </div>
+        <button type="button" class="btn btn-primary btn-block" (click)="generar()">generar</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+<div style="padding: 20px">
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Numero</th>
+        <th>Algo</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let resultado of resultados; index as i">
+          <th align="center" >{{i+1}} </th>
+          <td align="left">{{cad[i]}}</td>
+          <td align="right">{{resultados[i]}}</td>
+        
+        </tr>
+  </tbody>
+  </table>
+</div>
+
+
